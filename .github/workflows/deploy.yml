@@ -7,12 +7,14 @@ on:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04  # 或者保持 ubuntu-latest，等待 GitHub 自动升级
 
     steps:
-      # 检出仓库代码
+      # 检出仓库代码并初始化子模块
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          submodules: recursive
 
       # 设置 Node.js 环境
       - name: Set up Node.js
