@@ -18,19 +18,17 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # 选择你项目的 Node.js 版本
+            node-version: '18'  # 将 Node.js 版本更新为 18 或更高
+        
 
       - name: Install dependencies
         run: |
+          npm install -g hexo-cli  # 安装 Hexo CLI
           npm install  # 安装 Hexo 所需的依赖
+          
+    
 
       - name: Build Hexo
         run: |
           hexo generate  # 生成 Hexo 静态文件
-
-      - name: Deploy to GitHub Pages
-        run: |
-          # 确保 Hexo 使用正确的 git 配置进行部署
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          hexo deploy  # 使用 Hexo 自带的 deploy 功能部署到 GitHub Pages
+          hexo deploy  # 部署 Hexo 静态文件
