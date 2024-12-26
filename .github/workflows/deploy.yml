@@ -3,38 +3,39 @@ name: Deploy Hexo Blog
 on:
   push:
     branches:
-      - main  # 监听 main 分支的推送
+      - main
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-latest  # 使用 GitHub 提供的 Ubuntu 环境
+    runs-on: ubuntu-latest
 
     steps:
+      # Step 1: 检出代码，包括子模块
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          submodules: 'true'  # 如果你有子模块，确保它们也被拉取
+          submodules: true
+
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-            node-version: '18'  # 将 Node.js 版本更新为 18 或更高
-        
+          node-version: 22
 
+      # Step 3: 安装依赖项
       - name: Install dependencies
         run: |
-          npm install -g hexo-cli  # 安装 Hexo CLI
-          npm install  # 安装 Hexo 所需的依赖
-          
-    
+          npm install -g hexo-cli  # 全局安装 Hexo CLI
+          npm install             # 安装项目依赖
 
-      - name: Build Hexo
+      # Step 4: 生成静态文件
+      - name: Generate static files
         run: |
-          hexo generate  # 生成 Hexo 静态文件
+          hexo generate           # 等价于 hexo g
+
+      # Step 5: 部署到 GitHub Pages
       - name: Deploy to GitHub Pages
-        run: |
-         # 确保 Hexo 使用正确的 git 配置进行部署
-         git config --global user.name "GitHub Actions"
-         git config --global user.email "actions@github.com"
-         hexo deploy  # 使用 Hexo 自带的 deploy 功能部署到 GitHub Pages
-    
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # 使用 PAT 认证
+          publish_dir: ./public                               # 指定生成的静态文件目录
