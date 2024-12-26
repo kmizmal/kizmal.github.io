@@ -3,11 +3,11 @@ name: Deploy Hexo Blog
 on:
   push:
     branches:
-      - main  # 监控 main 分支的变化
+      - main
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-22.04  # 或者保持 ubuntu-latest，等待 GitHub 自动升级
+    runs-on: ubuntu-22.04
 
     steps:
       # 检出仓库代码并初始化子模块
