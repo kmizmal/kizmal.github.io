@@ -31,4 +31,10 @@ jobs:
       - name: Build Hexo
         run: |
           hexo generate  # 生成 Hexo 静态文件
-          hexo deploy  # 部署 Hexo 静态文件
+      - name: Deploy to GitHub Pages
+        run: |
+         # 确保 Hexo 使用正确的 git 配置进行部署
+         git config --global user.name "GitHub Actions"
+         git config --global user.email "actions@github.com"
+         hexo deploy  # 使用 Hexo 自带的 deploy 功能部署到 GitHub Pages
+    
