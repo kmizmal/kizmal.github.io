@@ -1,0 +1,3 @@
+[submodule "themes/hexo-theme-particlex"]
+	path = themes/hexo-theme-particlex
+	url = git@github.com:kmizmal/hexo-theme-particlex.git
