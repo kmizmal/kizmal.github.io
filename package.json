@@ -28,6 +28,6 @@
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^1.0.0",
     "hexo-uglify": "^2.0.0",
-    "pnpm": "^9.12.2"
+    "pnpm": "^9.15.2"
   }
 }
