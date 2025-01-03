@@ -35,8 +35,6 @@ jobs:
         run: |
           npm install -g pnpm hexo-cli  # 全局安装 pnpm
           pnpm install             # 安装项目依赖
-          pnpm install --save hexo-hanzi #汉字渲染插件
-          pnpm install canvas   #汉字渲染插件依赖
           pnpm install hexo-neat --save #项目压缩
           pnpm install --save hexo-tag-bilibili #b站视频        
           pnpm install hexo-autoprefixer --save #css兼容性
