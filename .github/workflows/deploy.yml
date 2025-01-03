@@ -27,9 +27,7 @@ jobs:
       # Step 3: 安装依赖项
       - name: Install dependencies
         run: |
-          npm install -g pnpm  # 全局安装 pnpm
-          pnpm setup
-          pnpm install hexo-cli --global  # 全局安装 Hexo CLI
+          npm install -g pnpm hexo-cli  # 全局安装 pnpm
           pnpm install             # 安装项目依赖
           pnpm install --save hexo-hanzi #汉字渲染插件
           pnpm install canvas --build-from-source  #汉字渲染插件依赖
