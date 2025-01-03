@@ -1,7 +1,13 @@
 ---
 title: 部署ASF并迁移Huggingface
+Translate_title: Deployment-of-ASF-and-relocation-of-Huggingface
+comments: true
+tags:
+  - 迁移
+published: true
+layout: post
 date: 2024-10-25 08:23:12
-tags: 迁移
+updated: 2025-01-03 15:45:12
 ---
 # 介绍
 ~~[ASF](https://github.com/JustArchiNET/ArchiSteamFarm) is a C# application with primary purpose of farming Steam cards from multiple accounts simultaneously. Unlike Idle Master which works only for one account at given time, while requiring Steam client running in the background and launching additional processes imitating "game playing" status, ASF doesn't require any Steam client running in the background, doesn't launch any additional processes and is made to handle unlimited Steam accounts at once. In addition to that, it's meant to be run on servers or other desktop-less machines, and features full cross-OS support, which makes it possible to launch on any operating system with .NET Core runtime, such as Windows, Linux and macOS. ASF is possible thanks to gigantic amount of work done in marvelous SteamKit2 library.~~

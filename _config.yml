@@ -14,7 +14,7 @@ timezone: 'Asia/Shanghai'
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://example.com
-permalink: :year/:month:day/:hour.html
+permalink: :year/:month:day/:Translate_title.html
 permalink_defaults:
 pretty_urls:
   trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
@@ -118,7 +118,9 @@ neat_js:
 # #https://github.com/kmizmal/hexo-translate-title.git
 # translate_title:
 #   translate_way: google
-
+# scripts:
+#   - scripts/translate-title.js
+translate_title: true
 
 #自动处理 CSS 兼容性https://github.com/hexojs/hexo-autoprefixer
 autoprefixer:

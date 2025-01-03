@@ -1,11 +1,10 @@
 ---
-
 title: about
-
+Translate_title: about
+comments: true
+layout: page
 date: 2023-06-16 09:49:00
-
 updated: 2024-10-26 22:29:00
-
 ---
 
 ## 欢迎来到本站
