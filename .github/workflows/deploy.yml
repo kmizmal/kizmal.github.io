@@ -30,6 +30,7 @@ jobs:
           pnpm install --save hexo-hanzi #汉字渲染插件
           pnpm install hexo-neat --save #项目压缩
           pnpm install --save hexo-tag-bilibili #b站视频
+          pnpm install --save canvas --build-from-source=false
           pnpm install hexo-autoprefixer --save #css兼容性
 
       # Step 4: 生成静态文件
