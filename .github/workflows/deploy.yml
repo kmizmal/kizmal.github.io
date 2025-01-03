@@ -21,16 +21,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 22
-      - name: system dep
-        run: |
-          apt-get update&&apt-get install -y build-essential libcairo2-dev libpango1.0-dev libgif-dev
+      # - name: system dep
+      #   run: |
+      #     apt-get update&&apt-get install -y build-essential libcairo2-dev libpango1.0-dev libgif-dev
       # Step 3: 安装依赖项
       - name: Install dependencies
         run: |
-          npm install -g hexo-cli pnpm # 全局安装 Hexo CLI
+          pnpm install hexo-cli --global  # 全局安装 Hexo CLI
           pnpm install             # 安装项目依赖
           pnpm install --save hexo-hanzi #汉字渲染插件
-          pnpm install canvas #汉字渲染插件依赖
+          pnpm install canvas --build-from-source  #汉字渲染插件依赖
           pnpm install hexo-neat --save #项目压缩
           pnpm install --save hexo-tag-bilibili #b站视频        
           pnpm install hexo-autoprefixer --save #css兼容性
