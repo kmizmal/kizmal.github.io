@@ -14,7 +14,7 @@ timezone: 'Asia/Shanghai'
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://example.com
-permalink: :year/:month/:day/:title/
+permalink: :year/:month:day/:hour.html
 permalink_defaults:
 pretty_urls:
   trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
@@ -101,30 +101,26 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: hexo-theme-particlex
 
-#压缩静态文件
-uglify:
-    mangle: true
-    output:
-    compress:
-    exclude:
-        - "*.min.js"
+#压缩静态文件 
+neat_enable: true
+neat_css:
+  enable: true
+  exclude:
+    - '*.min.css'
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '*.min.js'
+# #翻译标题https://github.com/cometlj/hexo-translate-title
+# #https://github.com/kmizmal/hexo-translate-title.git
+# translate_title:
+#   translate_way: google
 
-clean_css:
-    exclude:
-        - "*.min.css"
 
-html_minifier:
-    collapseBooleanAttributes: true
-    collapseWhitespace: true
-    ignoreCustomComments: [!!js/regexp /^\s*more/]
-    removeComments: true
-    removeEmptyAttributes: true
-    removeScriptTypeAttributes: true
-    removeStyleLinkTypeAttributes: true
-    minifyJS: true
-    minifyCSS: true
-
-#自动处理 CSS 兼容性
+#自动处理 CSS 兼容性https://github.com/hexojs/hexo-autoprefixer
 autoprefixer:
     exclude:
         - "*.min.css"
@@ -140,3 +136,4 @@ deploy:
   type: 
   repo:
   branch:
+

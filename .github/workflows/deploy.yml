@@ -25,8 +25,14 @@ jobs:
       # Step 3: 安装依赖项
       - name: Install dependencies
         run: |
-          npm install -g hexo-cli  # 全局安装 Hexo CLI
-          npm install             # 安装项目依赖
+          npm install -g hexo-cli pnpm # 全局安装 Hexo CLI
+          pnpm install             # 安装项目依赖
+          pnpm install --save hexo-hanzi #汉字渲染插件
+          pnpm install hexo-neat --save #项目压缩
+          pnpm install --save hexo-tag-bilibili #b站视频
+          pnpm add cheerio --save
+          pnpm install hexo-translate-title --save #翻译文章标题
+          pnpm install hexo-autoprefixer --save #css兼容性
 
       # Step 4: 生成静态文件
       - name: Generate static files
