@@ -20,10 +20,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 22
-      # - name: system dep
-      #   run: |
-      #     apt-get update&&apt-get install -y build-essential libcairo2-dev libpango1.0-dev libgif-dev
-      # Step 3: 安装依赖项
+          
       - name: Install dependencies
         run: |
           npm install -g pnpm hexo-cli  # 全局安装 pnpm
