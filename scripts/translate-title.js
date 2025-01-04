@@ -8,7 +8,7 @@ const fs = require('hexo-fs'); // 用于文件操作
 
 hexo.extend.filter.register('before_post_render', async function (data) {
 
-    if (!data.title || data.Translate_title !== undefined) {
+    if (data.Translate_title !== undefined) {
         console.log(data.title,"存在翻译标题，少女为你跳过");//如果标题已经翻译过了，就跳过并输出日志
         return data;
     }
@@ -62,7 +62,7 @@ const translate_api_url = "https://asfag654-libretranslate.hf.space/translate";
 async function Translate(title,source) {
 
     try {
-        console.log("少女正在努力帮你翻译:", title);
+        console.log("少女正在努力翻译:", title);
         const res = await fetch(translate_api_url, {
             method: "POST",
             body: JSON.stringify({
