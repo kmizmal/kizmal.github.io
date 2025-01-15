@@ -72,8 +72,8 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0
       pnpm:
-        specifier: ^9.15.3
-        version: 9.15.3
+        specifier: ^9.15.4
+        version: 9.15.4
       sharp:
         specifier: ^0.33.5
         version: 0.33.5
@@ -2409,8 +2409,8 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
-  pnpm@9.15.3:
-    resolution: {integrity: sha512-H3m8JFpm6wsHxdTYMTEkB3RkLKqobvfQQ0q0fA0W9msE4h4MCG62HmLHfvxNf37Aca+tN5avZIkvrmZQkXOJOg==}
+  pnpm@9.15.4:
+    resolution: {integrity: sha512-stwg4vxys+GISEWbNzWaMgZGY+VielHkx0ssKd2OjgSRSDw6u0B4nP1Xi/Ni+2uoJhsF8Dh9dnku1uI+o7G2oA==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -5813,7 +5813,7 @@ snapshots:
       execa: 0.10.0
       logalot: 2.1.0
 
-  pnpm@9.15.3: {}
+  pnpm@9.15.4: {}
 
   postcss-value-parser@4.2.0: {}
 
