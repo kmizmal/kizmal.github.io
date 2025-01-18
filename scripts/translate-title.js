@@ -9,7 +9,7 @@ const fs = require('hexo-fs'); // 用于文件操作
 hexo.extend.filter.register('before_post_render', async function (data) {
 
     if (data.Translate_title !== undefined) {
-        console.log(data.title,"存在翻译标题，少女为你跳过");//如果标题已经翻译过了，就跳过并输出日志
+        console.log(`\x1b[32m${data.title}\x1b[0m`,"存在翻译标题，少女为你跳过");//如果标题已经翻译过了，就跳过并输出日志
         return data;
     }
 
