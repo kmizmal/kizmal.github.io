@@ -48,6 +48,7 @@ relative_link: false
 future: true
 syntax_highlighter:
 highlight:
+  # enable: true
   line_number: true
   auto_detect: false
   tab_replace: ''
@@ -99,7 +100,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-particlex
+theme: particlex
 
 #压缩静态文件 https://github.com/Lete114/hexo-minify
 ## Hexo-minify Default Config Options

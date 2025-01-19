@@ -71,6 +71,9 @@ importers:
       hexo-uglify:
         specifier: ^2.0.0
         version: 2.0.0
+      highlight.js:
+        specifier: ^11.11.1
+        version: 11.11.1
       pnpm:
         specifier: ^9.15.4
         version: 9.15.4
@@ -1464,8 +1467,8 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
-  highlight.js@11.10.0:
-    resolution: {integrity: sha512-SYVnVFswQER+zu1laSya563s+F8VDGt7o35d4utbamowvUNLLMovFqwCLSocpZTz3MgaSRA1IbqRWZv97dtErQ==}
+  highlight.js@11.11.1:
+    resolution: {integrity: sha512-Xwwo44whKBVCYoliBQwaPvtd/2tYFkRQtXDWj1nackaV2JPXx3L0+Jvd8/qCJ2p+ML0/XVkJ2q+Mr+UVdpJK5w==}
     engines: {node: '>=12.0.0'}
 
   hosted-git-info@2.8.9:
@@ -4823,7 +4826,7 @@ snapshots:
       camel-case: 4.1.2
       cross-spawn: 7.0.3
       deepmerge: 4.3.1
-      highlight.js: 11.10.0
+      highlight.js: 11.11.1
       htmlparser2: 7.2.0
       prismjs: 1.29.0
       strip-indent: 3.0.0
@@ -4833,7 +4836,7 @@ snapshots:
       camel-case: 4.1.2
       cross-spawn: 7.0.3
       deepmerge: 4.3.1
-      highlight.js: 11.10.0
+      highlight.js: 11.11.1
       htmlparser2: 9.1.0
       prismjs: 1.29.0
       strip-indent: 3.0.0
@@ -4867,7 +4870,7 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  highlight.js@11.10.0: {}
+  highlight.js@11.11.1: {}
 
   hosted-git-info@2.8.9: {}
 

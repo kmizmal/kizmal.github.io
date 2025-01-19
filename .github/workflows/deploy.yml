@@ -29,12 +29,13 @@ jobs:
           pnpm install --save hexo-tag-bilibili #b站视频        
           pnpm install hexo-autoprefixer --save #css兼容性
 
-      # Step 4: 生成静态文件
       - name: Generate static files
         run: |
-          hexo generate           # 等价于 hexo g
+          hexo generate
+      - name: CNAME file
+        run: |
+          echo 'blog.zmal.top' > ./public/CNAME
 
-      # Step 5: 部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
