@@ -71,9 +71,6 @@ importers:
       hexo-uglify:
         specifier: ^2.0.0
         version: 2.0.0
-      highlight.js:
-        specifier: ^11.11.1
-        version: 11.11.1
       pnpm:
         specifier: ^9.15.4
         version: 9.15.4
