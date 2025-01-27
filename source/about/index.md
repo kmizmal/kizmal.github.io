@@ -10,7 +10,7 @@ updated: 2024-10-26 22:29:00
 ## 欢迎来到本站
 
 这里是`zmal`/`紫沐`/`梦断忆`,胡言乱语的地方
-
+![原神卡片](https://hoyocard.qhy04.com/gs/rand/288292888.png)
 ### 下面是紫沐的联系方式
 
 ```QQ
@@ -47,4 +47,6 @@ _~~下次也不一定~~_
 
 本站供个人学习交流使用，部分素材来自网络。如有侵权，请及时联系我！
 
-## Translate_title: about
+## 留言板
+
+[![留言板](https://chat.getloli.com/room/@zmal/svg?width=750&height=360&limit=20&theme=light&fontSize=13&title=jad@github.com:%20~)](https://chat.getloli.com/room/@zmal)
