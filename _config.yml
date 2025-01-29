@@ -46,9 +46,10 @@ marked:
   postAsset: true
 relative_link: false
 future: true
+
 syntax_highlighter:
 highlight:
-  # enable: true
+  enable: true
   line_number: true
   auto_detect: false
   tab_replace: ''

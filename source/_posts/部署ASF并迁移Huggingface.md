@@ -25,7 +25,7 @@ updated: 2025-01-03 15:45:12
 
 [Linux：](https://learn.microsoft.com/zh-cn/dotnet/core/install/linux)
 
-```执行以下命令快速检查/安装
+```bash
 apt-get update&& apt-get upgrade -y&& apt-get install -y ca-certificates libc6 libgcc-s1 libicu70 libgssapi-krb5-2 libssl3 libstdc++6 zlib1g
 ```
 ##  下载可执行文件
@@ -33,22 +33,23 @@ apt-get update&& apt-get upgrade -y&& apt-get install -y ca-certificates libc6 l
 
 ~~解压不教~~
 
-这是一个文件夹结构的示例：
-```文件树
-D:\ASF (放置您自己与 ASF 相关的东西)
-    ├── ASF shortcut.lnk (可选)
-    ├── Config shortcut.lnk (可选)
-    ├── Commands.txt (可选)
-    ├── MyExtraScript.bat (可选)
-    ├── (...) (任何您选择放在这里的其他文件，可选)
-    └── Core (ASF 自身专用文件夹，也就是您解压压缩包的地方)#截图这里
-         ├── ArchiSteamFarm(.exe)
-         ├── config
-             ├── yourbotname.json#配置好的json放这个位置
-         ├── logs
-         ├── plugins
-         └── (...)
-```
+这是一个文件夹结构的示例：  
+>  
+> D:\ASF (放置您自己与 ASF 相关的东西)
+> ├── ASF shortcut.lnk (可选)
+> ├── Config shortcut.lnk (可选)
+> ├── Commands.txt (可选)
+> ├── MyExtraScript.bat (可选)
+> ├── (...) (任何您选择放在这里的其他文件，可选)
+> └── Core (ASF 自身专用文件夹，也就是您解压压缩包的地方)
+>     ├── ArchiSteamFarm(.exe)
+>     ├── config
+>     │   ├── yourbotname.json  # 配置好的json放这个位置
+>     ├── logs
+>     ├── plugins
+>     └── (...)
+
+
 ![](1.png)
 ##  配置
 推荐使用官方[在线配置文件生成器](https://justarchinet.github.io/ASF-WebConfigGenerator/#/bot)
@@ -96,7 +97,7 @@ D:\ASF (放置您自己与 ASF 相关的东西)
 
   ![](9.png)
   点这里创建Dockerfile
-```Dockerfile
+```dockerfile
 FROM ubuntu:22.04
 EXPOSE 1242
 
