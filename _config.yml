@@ -49,15 +49,15 @@ future: true
 
 syntax_highlighter:
 highlight:
-  enable: true
-  line_number: true
+  enable: false
+  line_number: false
   auto_detect: false
   tab_replace: ''
   wrap: true
-  hljs: false
 prismjs:
-  preprocess: true
-  line_number: true
+  enable: false
+  preprocess: false
+  line_number: false
   tab_replace: ''
 
 # Home page setting
