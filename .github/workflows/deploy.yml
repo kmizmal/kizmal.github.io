@@ -28,6 +28,8 @@ jobs:
           pnpm install hexo-minify --save #项目压缩
           pnpm install --save hexo-tag-bilibili #b站视频        
           pnpm install hexo-autoprefixer --save #css兼容性
+          pnpm rebuild gifsicle  # 重新编译 gifsicle
+          pnpm add gifsicle
 
       - name: Generate static files
         run: |
