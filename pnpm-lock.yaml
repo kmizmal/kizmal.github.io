@@ -72,8 +72,8 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0
       pnpm:
-        specifier: ^9.15.4
-        version: 9.15.4
+        specifier: ^10.2.0
+        version: 10.2.0
       sharp:
         specifier: ^0.33.5
         version: 0.33.5
@@ -2409,8 +2409,8 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
-  pnpm@9.15.4:
-    resolution: {integrity: sha512-stwg4vxys+GISEWbNzWaMgZGY+VielHkx0ssKd2OjgSRSDw6u0B4nP1Xi/Ni+2uoJhsF8Dh9dnku1uI+o7G2oA==}
+  pnpm@10.2.0:
+    resolution: {integrity: sha512-DSc2TgE5xqre7WWtoVMTXgypbI2kISO9UAR/lhM53Hp1j8LpRLQo9SvlcNG9M3JFXBxl+i56oL+/kxGQ+VUgAQ==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -2636,6 +2636,11 @@ packages:
 
   semver@7.6.3:
     resolution: {integrity: sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==}
+    engines: {node: '>=10'}
+    hasBin: true
+
+  semver@7.7.0:
+    resolution: {integrity: sha512-DrfFnPzblFmNrIZzg5RzHegbiRWg7KMR7btwi2yjHwx06zsUbO5g613sVwEV7FTwmzJu+Io0lJe2GJ3LxqpvBQ==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -3379,7 +3384,7 @@ snapshots:
       nopt: 5.0.0
       npmlog: 5.0.1
       rimraf: 3.0.2
-      semver: 7.6.3
+      semver: 7.7.0
       tar: 6.2.1
     transitivePeerDependencies:
       - encoding
@@ -5813,7 +5818,7 @@ snapshots:
       execa: 0.10.0
       logalot: 2.1.0
 
-  pnpm@9.15.4: {}
+  pnpm@10.2.0: {}
 
   postcss-value-parser@4.2.0: {}
 
@@ -6021,6 +6026,9 @@ snapshots:
   semver@6.3.1: {}
 
   semver@7.6.3: {}
+
+  semver@7.7.0:
+    optional: true
 
   send@0.19.0:
     dependencies:
