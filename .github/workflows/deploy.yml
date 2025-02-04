@@ -16,18 +16,19 @@ jobs:
           ref: main
           submodules: true
                 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 22
+          cache: 'pnpm'
           
       - name: Install dependencies
         run: |
           npm install -g pnpm hexo-cli  # 全局安装 pnpm
           pnpm install             # 安装项目依赖
-          pnpm install hexo-minify --save #项目压缩
-          pnpm install --save hexo-tag-bilibili #b站视频        
-          pnpm install hexo-autoprefixer --save #css兼容性
+          #pnpm install hexo-minify --save #项目压缩
+          #pnpm install --save hexo-tag-bilibili #b站视频        
+          #pnpm install hexo-autoprefixer --save #css兼容性
 
       - name: Generate static files
         run: |
