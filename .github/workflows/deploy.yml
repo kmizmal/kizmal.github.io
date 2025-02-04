@@ -15,30 +15,26 @@ jobs:
         with:
           ref: main
           submodules: true
-                
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 22
           cache: 'pnpm'
-          
+
+      - name: Setup pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
+          pnpm --version  # 确保 pnpm 可用
+
       - name: Install dependencies
         run: |
-          npm install -g pnpm hexo-cli  # 全局安装 pnpm
-          pnpm install             # 安装项目依赖
-          #pnpm install hexo-minify --save #项目压缩
-          #pnpm install --save hexo-tag-bilibili #b站视频        
-          #pnpm install hexo-autoprefixer --save #css兼容性
-
+          pnpm install
+          
       - name: Generate static files
         run: |
           hexo generate
-      - name: CNAME file
-        run: |
-          echo 'blog.zmal.top' > ./public/CNAME
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # 使用 PAT 认证
-          publish_dir: ./public                               # 指定生成的静态文件目录
+      - name: CNAME file
+        run: echo "blog.zmal.top" > ./CNAME
